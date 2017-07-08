@@ -1,0 +1,8 @@
+{
+  "name": "revmatch-backend",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/NickMcKendry/revmatch-backend.git",
+  "author": "Nick McKendry <nickmckendry@gmail.com>",
+  "license": "MIT"
+}
