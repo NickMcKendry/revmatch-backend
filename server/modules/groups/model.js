@@ -1,5 +1,6 @@
 import mongoose, { Schema } from 'mongoose'
 
+
 const GroupSchema = new Schema({
   name: {
     type: String,
@@ -26,5 +27,30 @@ const GroupSchema = new Schema({
   }]
 
 }, {timestamps: true})
+
+GroupSchema.statics.addMeetup = async function(id, args){
+  const Meetup = mongoose.model('Meetup')
+
+  //add group id to meetup the meetup group, this is the author of the event
+  const meetup = await new Meetup({ ...args, group: id })
+
+  //find group with id provided by url and push the meetup into the events element
+  const group = await this.findByIdAndUpdate(id, { $push: { events: meetup.id } })
+
+
+  return {
+    meetup: await meetup.save({}),
+    group
+
+  }
+
+
+
+
+
+
+
+
+}
 
 export default mongoose.model('Group', GroupSchema)

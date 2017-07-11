@@ -1,9 +1,10 @@
 import mongoose, { Schema } from 'mongoose'
 
 const MeetupSchema = new Schema({
-  name : {
+  title : {
     type: String,
-    required: true
+    required: true,
+    minLength: [2, '2 characters minimum']
   },
 
   location : {
@@ -15,6 +16,17 @@ const MeetupSchema = new Schema({
     type: String,
     required: true
   },
+
+  description : {
+    type: String,
+    required: true,
+    minLength: [10, '10 characters minimum']
+  },
+
+  group : {
+    type: Schema.Types.ObjectId,
+    ref: "Group"
+  }
 
 
 }, {timestamps: true})
