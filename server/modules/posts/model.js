@@ -20,7 +20,7 @@ const PostSchema = new Schema({
     type: String,
     required: false
   }
-})
+}, {timestamps: true})
 
 
 export default mongoose.model('Post', PostSchema)
