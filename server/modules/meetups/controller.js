@@ -7,7 +7,7 @@ export const createMeetup = async (req, res) => {
 
   try{
     console.log('hello');
-    return res.status(201).json({ meetups: await newMeetup.save()})
+    return res.status(200).json({ meetups: await newMeetup.save()})
   } catch (e) {
     console.log('err');
     return res.status(e.status).json({error: true, message: "Error with Meetup"})
