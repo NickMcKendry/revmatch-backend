@@ -23,6 +23,8 @@ const MeetupSchema = new Schema({
     minLength: [10, '10 characters minimum']
   },
 
+
+
   group : {
     type: Schema.Types.ObjectId,
     ref: "Group"
