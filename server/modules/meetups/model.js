@@ -26,7 +26,7 @@ const MeetupSchema = new Schema({
   date: {
     type: new Date(),
     required: true
-  }
+  },
 
 
 
