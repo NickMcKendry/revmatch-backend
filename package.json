@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "NODE_ENV --development nodemon index.js",
     "start": "node index.js",
-    "postinstall": "rndebugger-open",
   },
   "repository": "https://github.com/NickMcKendry/revmatch-backend.git",
   "author": "Nick McKendry <nickmckendry@gmail.com>",
