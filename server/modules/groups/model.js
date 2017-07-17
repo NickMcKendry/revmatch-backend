@@ -35,13 +35,11 @@ GroupSchema.statics.addMeetup = async function(id, args){
   const meetup = await new Meetup({ ...args, group: id })
 
   //find group with id provided by url and push the meetup into the events element
-  const group = await this.findByIdAndUpdate(id, { $push: { events: meetup.id } })
+  await this.findByIdAndUpdate(id, { $push: { events: meetup.id } })
 
 
   return {
     meetup: await meetup.save({}),
-    group
-
   }
 
 
