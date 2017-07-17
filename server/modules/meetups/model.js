@@ -23,6 +23,11 @@ const MeetupSchema = new Schema({
     minLength: [10, '10 characters minimum']
   },
 
+  date: {
+    type: new Date(),
+    required: true
+  }
+
 
 
   group : {
