@@ -13,6 +13,10 @@
     "node": "8.1.4"
   },
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "jsonwebtoken": "^7.4.1",
