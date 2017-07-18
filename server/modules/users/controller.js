@@ -1,6 +1,6 @@
 import User from './model'
 
-export loginWithAuth0 = async (req, res) => {
+export const loginWithAuth0 = async (req, res) => {
   const { ...args } = req.body
 
   try{
