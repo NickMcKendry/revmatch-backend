@@ -9,8 +9,8 @@
   "repository": "https://github.com/NickMcKendry/revmatch-backend.git",
   "author": "Nick McKendry <nickmckendry@gmail.com>",
   "license": "MIT",
-  "engines" : {
-    "node" : "8.1.4"
+  "engines": {
+    "node": "8.1.4"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
@@ -19,8 +19,11 @@
     "babel-register": "^6.24.1",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1",
     "mongoose": "4.7.7",
-    "morgan": "^1.8.2"
+    "morgan": "^1.8.2",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1"
   },
   "devDependencies": {
     "eslint-config-equimper": "^2.1.2",
